@@ -1,0 +1,14 @@
+name: Conventional Commit Checker
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  check_conventional_commit:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name : Print Title of PR
+      run: echo The Title of your PR is ${{ github.event.pull_request.title }}
