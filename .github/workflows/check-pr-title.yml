@@ -1,9 +1,8 @@
 name: Conventional Commit Checker
 on:
   pull_request:
-    types:
-      - opened
-      - synchronize
+    branches:
+      - main
 
 jobs:
   check_conventional_commit:
