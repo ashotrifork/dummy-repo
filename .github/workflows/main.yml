@@ -1,0 +1,14 @@
+name: Changelog generator
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-changelog:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+    - name : Changelog generator
+      run: npx conventional-changelog -p angular -i CHANGELOG.md -s
