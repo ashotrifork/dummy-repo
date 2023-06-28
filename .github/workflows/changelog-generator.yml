@@ -1,0 +1,22 @@
+name: Changelog generator
+on:
+  pullrequest:
+    types: [opened, reopened, synchronize]
+    branches:
+      - main
+
+jobs:
+  generate-changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - name: Changelog generator
+        run: npx conventional-changelog-cli -p conventionalcommits -i CHANGELOG.md -s
+      - name: Save Changelog file
+        run: |
+        git config --global user.name "user mane"
+        git config --global user.email "user email"
+        git add ./CHANGELOG.md
+        git commit -m "docs: new changelog"
+        git push
