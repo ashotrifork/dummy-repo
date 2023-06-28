@@ -1,7 +1,7 @@
 name: Changelog generator
 on:
-  pull_request:
-    types: [opened, reopened, synchronize]
+  push:
+    paths-ignore: - 'CHANGELOG.md'
     branches:
       - main
 
