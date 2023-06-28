@@ -15,8 +15,8 @@ jobs:
         run: npx conventional-changelog-cli -p conventionalcommits -i CHANGELOG.md -s
       - name: Save Changelog file
         run: |
-        git config --global user.name "user mane"
-        git config --global user.email "user email"
-        git add ./CHANGELOG.md
-        git commit -m "docs: new changelog"
-        git push
+          git config --global user.name "user mane"
+          git config --global user.email "user email"
+          git add ./CHANGELOG.md
+          git commit -m "docs: new changelog"
+          git push
