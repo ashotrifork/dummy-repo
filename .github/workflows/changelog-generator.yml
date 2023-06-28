@@ -1,7 +1,7 @@
 name: Changelog generator
 on:
   push:
-    paths-ignore: - 'CHANGELOG.md'
+    paths-ignore: 'CHANGELOG.md'
     branches:
       - main
 
