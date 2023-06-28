@@ -1,6 +1,6 @@
 name: Changelog generator
 on:
-  pullrequest:
+  pull_request:
     types: [opened, reopened, synchronize]
     branches:
       - main
