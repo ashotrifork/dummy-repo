@@ -25,6 +25,7 @@ jobs:
           output-file: "false"
           skip-commit: "true"
           skip-on-empty: "true"
+          preset: "conventionalcommits"
       - name: Release 🎓
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
